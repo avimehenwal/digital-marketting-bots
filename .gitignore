@@ -1,8 +1,6 @@
 # Byte-compiled / optimized / DLL files
 vars.yaml
-log.html
-output.xml
-report.html
+/output/
 
 __pycache__/
 *.py[cod]

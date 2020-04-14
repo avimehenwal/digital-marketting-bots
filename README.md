@@ -9,7 +9,7 @@
 ```sh
 find . -type f -name 'selenium*.png' -delete
 find . -type f -name '*.log' -delete
-kill -9 (pgrep firefox); clear;robot --variablefile vars.yaml twitter.robot
+kill -9 (pgrep firefox); clear;robot --variablefile vars.yaml --outputdir output twitter.robot
 ```
 
 ## Features
@@ -28,6 +28,8 @@ kill -9 (pgrep firefox); clear;robot --variablefile vars.yaml twitter.robot
 ## trivial Issues
 
 * `UnexpectedAlertPresentException` Handle popups
+* [Add arguments to js](https://stackoverflow.com/questions/21256845/is-there-a-way-to-provide-arguments-to-execute-javascript-in-robot-framework)
+* After coming back to Homepage, probabily the elements are altered and cannot fetch next item `[1]` from list
 
 ### Dependencies
 
