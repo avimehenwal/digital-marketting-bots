@@ -4,6 +4,14 @@
 
 ![demo](demo.png)
 
+## Run
+
+```sh
+find . -type f -name 'selenium*.png' -delete
+find . -type f -name '*.log' -delete
+kill -9 (pgrep firefox); clear;robot --variablefile vars.yaml twitter.robot
+```
+
 ## Features
 
 * [robotic process automation (RPA)](https://en.wikipedia.org/wiki/Robotic_process_automation)
