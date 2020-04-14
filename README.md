@@ -31,6 +31,11 @@ kill -9 (pgrep firefox); clear;robot --variablefile vars.yaml --outputdir output
 * [Add arguments to js](https://stackoverflow.com/questions/21256845/is-there-a-way-to-provide-arguments-to-execute-javascript-in-robot-framework)
 * After coming back to Homepage, probabily the elements are altered and cannot fetch next item `[1]` from list
 
+### Resources
+
+* https://rpaframework.org/
+
+
 ### Dependencies
 
 > Thankyou for writing these wonderful libraries
