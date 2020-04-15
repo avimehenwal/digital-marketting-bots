@@ -8,16 +8,16 @@ if pgrep chrome
 end
 
 robot \
-    # --dryrun \
+    --dryrun \
     # --include test-structure \
     # --exclude homepage \
     --rpa \
-    # --name InstagramOutreach \
+    --name "Avi Instagram Bot" \
     # --suite BlessLikes \
     --outputdir output \
     --debugfile debugfile.log \
     --loglevel DEBUG \
-    # --reportbackground green:red \
+    --reportbackground "#ADD8E6":"#FFCCCB" \
     --suitestatlevel 3 \
     --variablefile ../vars.yaml \
     --variable iter:$iter \

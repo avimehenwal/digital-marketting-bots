@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation           Make browser available to all subsequent tests/tasks
 Resource                ../resources/page_objects/LoginPage.robot
-Force Tags 			    Instagram       setup
+Force Tags 			    Instagram       setup       ${platform}
 
 
 *** Test Cases ***

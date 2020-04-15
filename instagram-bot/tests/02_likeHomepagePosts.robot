@@ -2,7 +2,7 @@
 Documentation           Outreach Strategy
 ...                     Like first {N} visible posts on homescreen
 Resource                ../resources/page_objects/Homepage.robot
-Force Tags 			    Instagram       homepage
+Force Tags 			    Instagram       homepage        ${platform}
 Suite Setup             Ready Homepage
 
 
