@@ -1,50 +1,40 @@
 *** Settings ***
-Documentation       Surf instagram and love posts on timeline
-Library             SeleniumLibrary
-Force Tags 			Instagram
-
-# Suite Setup         Multiple Accounts        @{insta_user}
-Suite Teardown      Run Suite Teardown
-
-Test Template       Open Login Page
-# Test Setup
-Test Teardown 		Close Browser
-
-
-*** Variables ***
-${LOGIN URL}      	https://www.instagram.com/accounts/login/
-${BROWSER}        	Chrome
-${TIMEOUT}		  	2s
-${NaN}			   	css:#avimehenwal
-${username}       	css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(2) > div > label > input
-${password}       	css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(3) > div > label > input
-${click_login}      css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(4)
-${popup_notification}   css:button.aOOlW:nth-child(2)
-${home_text}      	all_visual_interpretation
-${child_heart}     	div.eo2As > section >span:nth-child(1)
-${hearts}		   	css:article div.eo2As > section >span:nth-child(1)
-${jsheart}		   	article div.eo2As > section >span:nth-child(1)
-${iter}				5
-
-*** Test Cases ***      ACCOUNT
-Account ONE 			@{insta_users}[0]
-Account TWO 			@{insta_users}[1]
-Account THREE   		@{insta_users}[2]
-
-
-# *** Tasks ***
-# Instagram Accounts
-# 	# [Template]			Open Login Page
-# 	[Template]			Example keyword
-# 	[Teardown] 		    Close Browser
-# 	FOR    ${item}    IN    @{insta_user}
-#         ${item}
-#     END
-
-
-
+Documentation               Only Shared Keywords
+...                         Available to all page objects
+...                         Kindly do not add variables here
 
 *** Keywords ***
+Match Page Title
+	[Arguments]			${expected}
+	[Documentation]		Useful to check if we are on right page
+    ${title}=			Get Title
+    Should Be Equal     ${title}		${expected}
+
+Silently Handle Alert
+	[Documentation]		Supress language change check dialog box
+	...					Add exact message here
+	...					Only seen at entrypoint window
+	Run Keyword and Ignore Error      Handle Alert        action=ACCEPT
+
+
+# -------------------------------------------------------------FORM FILLING
+Wait And Input Text
+    [Arguments]         ${locator}      ${text}
+    [Documentation]     Wait, then look for element before filling
+    Wait Until Page Contains Element        ${locator}
+    Page Should Contain Element             ${locator}
+    Input Text          ${locator}    ${text}       clear=True
+
+Wait And Press Button
+    [Arguments]         ${locator}
+    [Documentation]     Wait, then look for element, is enabled then press
+    Wait Until Page Contains Element        ${locator}
+    Page Should Contain Element         ${locator}
+    Wait Until Element Is Enabled       ${locator}
+    Set Focus To Element                ${locator}
+    Click Element                       ${locator}
+
+# --------------------------------------------------------------
 Scroll In Viewport
 	[Arguments]     ${index}
 	# Log To Console 		item ${item}

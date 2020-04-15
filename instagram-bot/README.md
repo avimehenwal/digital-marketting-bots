@@ -17,9 +17,31 @@ Google Chrome 81.0.4044.92
 * Cookie file not found, creating cookie... Login A/B test detected! Trying another string...
   * https://github.com/timgrossmann/InstaPy/issues/5351
 * [Scroll seems to works on chrome](https://github.com/robotframework/SeleniumLibrary/pull/1083)
+* StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  * On Focus Element
+  * Generally this is due to the DOM being updated and you trying to access an updated/new element -- but the DOM's refreshed so it's an invalid reference you have..
+
+
 
 ```sh
 kill -9 (pgrep firefox); python instagram-bot/quickstart.py --username abcd --password 1234
 
 kill -9 (pgrep firefox);robot --variablefile vars.yaml --outputdir output instagram-bot/instagram.robot
 ```
+
+### Findings
+
+* Initall page is loaded with 4 articles
+* Only 4 articles are active on page at a time before they are modified
+* Structure your automation flow first, expect everything to fail.
+  * Focus on debugging and locating Failure step quickly
+*
+
+### ToDos
+
+* [ ] Determine is post is already liked?
+* [ ] Repeat/Retry failed steps
+* [ ] Debuggable, [Page Object Model Design Pattern](https://martinfowler.com/bliki/PageObject.html)
+  * [DOM Traversal Flow](https://en.wikipedia.org/wiki/Document_Object_Model)
+  * Overcome Repetition
+* [ ] [Combine outputs](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#combining-outputs) from various deployments in postprocessing
