@@ -8,11 +8,13 @@ if pgrep chrome
 end
 
 robot \
+    # --dryrun \
+    # --include test-structure \
+    # --exclude homepage \
     --rpa \
-    --dryrun \
-    --outputdir output \
     # --name InstagramOutreach \
     # --suite BlessLikes \
+    --outputdir output \
     --debugfile debugfile.log \
     --loglevel DEBUG \
     # --reportbackground green:red \

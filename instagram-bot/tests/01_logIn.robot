@@ -6,11 +6,10 @@ Force Tags 			    Instagram       login
 
 
 *** Test Cases ***
-Test Functio
-    LoginPage Keyword Dummy
-
 If Login Page
+    [Tags]          check
     Is Login Page
 
 Fill Login Form And Submit
+    [Tags]          form
     Submit Login Form

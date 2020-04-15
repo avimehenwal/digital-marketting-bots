@@ -4,11 +4,18 @@ Documentation               Only Shared Keywords
 ...                         Kindly do not add variables here
 
 *** Keywords ***
+# Super BASIC ones
 Match Page Title
 	[Arguments]			${expected}
 	[Documentation]		Useful to check if we are on right page
     ${title}=			Get Title
-    Should Be Equal     ${title}		${expected}
+    Should Contain      ${title}		${expected}		msg=${title}
+
+Focus And Click
+    [Arguments]         ${locator}
+    [Documentation]     Focus on element and then click
+    Set Focus To Element                    ${locator}
+    Click Element                           ${locator}
 
 Silently Handle Alert
 	[Documentation]		Supress language change check dialog box
@@ -31,8 +38,7 @@ Wait And Press Button
     Wait Until Page Contains Element        ${locator}
     Page Should Contain Element         ${locator}
     Wait Until Element Is Enabled       ${locator}
-    Set Focus To Element                ${locator}
-    Click Element                       ${locator}
+	Focus And Click 					${locator}
 
 # --------------------------------------------------------------
 Scroll In Viewport

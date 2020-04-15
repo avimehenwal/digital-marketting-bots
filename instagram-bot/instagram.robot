@@ -85,6 +85,7 @@ Open Login Page
 	[Arguments]     ${accounts}
     Open Browser    ${LOGIN URL}    ${BROWSER}
     Run Keyword and Ignore Error      Handle Alert        action=ACCEPT
+
     Wait Until Page Contains Element        ${username}
     Input Text          ${username}    ${accounts}   clear=True
     Wait Until Page Contains Element        ${password}

@@ -3,24 +3,26 @@ Documentation       Placeholder for all Locator Variables
 
 *** Variables ***
 
-# Page Urls
+# (in bold) Page Urls
 ${LOGIN URL}      	https://www.instagram.com/accounts/login/
 ${BROWSER}        	Chrome
 
-# Framework Settings
+# Framework Settings (in bold)
 ${TIMEOUT}		  	2s
 ${SPEED}            0.1s
 ${NaN}			   	css:#avimehenwal
 ${iter}				5
 
 # COMMOM PAGE VARIABLES
-${title}            Instagram
+# text variables in SMALL-CASE
+${title}                Instagram
 
+# **************** ALL LOCATORS in CAMEL-CASE
 # LOGIN PAGE
-${username}       	css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(2) > div > label > input
-${password}       	css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(3) > div > label > input
-${click_login}      css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(4)
-${popup_notification}   css:button.aOOlW:nth-child(2)
+${UserName}       	  css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(2) > div > label > input
+${Password}        	  css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(3) > div > label > input
+${LoginBtn}           css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(4)
+${Popup}              css:button.aOOlW:nth-child(2)
 
 # HOMEPAGE
 ${home_text}      	all_visual_interpretation

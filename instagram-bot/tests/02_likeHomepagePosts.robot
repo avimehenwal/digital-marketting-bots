@@ -7,8 +7,13 @@ Force Tags 			    Instagram       homepage
 
 *** Test Cases ***
 Test Functio
+    [Tags]           test-structure
     Homepage Keyword Dummy
 
 If Homepage
+    [Tags]          check
     Is Homepage
 
+Prepare Homepage
+    [Tags]          popup
+    Ready Page

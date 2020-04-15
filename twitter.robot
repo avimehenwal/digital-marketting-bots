@@ -1,7 +1,8 @@
 
 *** Settings ***
-Documentation     Surf twitter and love tweets on timeline
-Library           SeleniumLibrary
+Documentation       Surf twitter and love tweets on timeline
+Library             SeleniumLibrary
+Suite Teardown      Close Browser
 
 *** Variables ***
 ${LOGIN URL}      https://twitter.com/login

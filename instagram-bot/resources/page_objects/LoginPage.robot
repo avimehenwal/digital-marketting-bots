@@ -9,7 +9,7 @@ Resource            ../SharedKeywords.robot
 Variables           ../variables.py
 
 *** Variables ***
-
+${title}            Login
 
 *** Keywords ***
 Is Login Page
@@ -19,8 +19,9 @@ LoginPage Keyword Dummy
     Log        LoginPage Keyword
 
 Submit Login Form
-    Wait And Input Text        ${username}      ${accounts}
-    Wait And Input Text        ${password}      ${insta_pass}
-    Wait And Press Button      ${click_login}
+    [Documentation]             All information from variables
+    Wait And Input Text        ${UserName}      ${insta_user}
+    Wait And Input Text        ${Password}      ${insta_pass}
+    Wait And Press Button      ${LoginBtn}
     Log To Console      LOGIN DONE
 

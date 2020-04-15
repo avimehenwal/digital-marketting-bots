@@ -10,7 +10,7 @@ Variables           ../variables.py
 
 
 *** Variables ***
-
+${matchtext}      	smoothengineer
 
 *** Keywords ***
 Is Homepage
@@ -18,3 +18,10 @@ Is Homepage
 
 Homepage Keyword Dummy
     Log        Homepage Keyword
+
+Ready Page
+    Wait Until Page Contains Element        ${Popup}
+    Focus And Click                         ${Popup}
+    Run Keyword and Ignore Error    Wait Until Page Contains    ${matchtext}
+	Scroll To Botton
+
