@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 vars.yaml
 /output/
+instagram-bot/output/
 
 __pycache__/
 *.py[cod]
@@ -130,3 +131,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+log.html
