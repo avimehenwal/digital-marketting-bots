@@ -11,8 +11,8 @@ ${BROWSER}        	Chrome
 ${TIMEOUT}		  	    2s
 ${SPEED}                0.1s
 ${NaN}			   	    css:#avimehenwal
-${NUM_POSTS}			5
-${CLICKLIKES}           false
+${NUM_POSTS}			50
+${CLICKLIKES}           true
 
 # COMMOM PAGE VARIABLES
 # text variables in SMALL-CASE
