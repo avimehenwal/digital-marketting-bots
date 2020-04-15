@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation           Add all Homepage relates tests/tasks
-Resource                ../resources/page_objects/Homepage.robot
-Force Tags 			    ${platform}     homepage
+Resource                ../page_objects/Homepage.robot
 Suite Setup             Ready Homepage
+Force Tags 			    ${platform}     twitter     homepage
 
 
 *** Test Cases ***

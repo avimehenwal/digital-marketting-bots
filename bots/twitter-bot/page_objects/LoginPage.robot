@@ -1,13 +1,13 @@
-
 *** Settings ***
-Documentation       Homepage Page Object Model
-...                 > kindly use only page related variable allowed here
-...                 > use locators.robot for adding all locators
-...                 This is mostly for local data and keywords
-Resource            ../SharedKeywords.robot
-Resource            ../locators.robot
-Resource            ../common.robot
-Variables           ../variables.py
+Documentation       TWITTER LOGIN PAGE OBJECT MODEL
+Resource            ../../common_resources/framework_variables.robot
+Resource            ../../common_resources/globalLibraries.robot
+Resource            ../../common_resources/keywords.robot
+Variables           ../../common_resources/variables.py
+Resource            ../resources/common.robot
+Resource            ../resources/Keywords.robot
+Resource            ../resources/locators.robot
+Variables           ../resources/variables.py
 
 
 *** Variables ***

@@ -1,7 +1,9 @@
 *** Settings ***
 Documentation           Make browser available to all subsequent tests/tasks
-Resource                ../resources/page_objects/LoginPage.robot
-Force Tags 			    ${platform}
+Resource                ../page_objects/LoginPage.robot
+Force Tags 			    ${platform}     setup
+Default Tags            twitter
+
 
 
 *** Test Cases ***
@@ -14,3 +16,6 @@ Ready Browser
     Open Browser                    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
     Silently Handle Alert
+
+
+# END

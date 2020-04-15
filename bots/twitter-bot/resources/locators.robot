@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Placeholder for all Locator Variables
+Documentation       Twitter Bot specifi shared Variables
 ...                 > all global variables      -> CAPITALCASE
 ...                 > all locators names        -> CamelCase
 ...                 > all local text variables  -> smallcase
@@ -12,13 +12,6 @@ Documentation       Placeholder for all Locator Variables
 # PAGE URLs in CAPITAL case
 ${LOGIN URL}      	https://www.instagram.com/accounts/login/
 
-# Framework Settings in CAPITAL case
-${BROWSER}        	    Chrome
-${TIMEOUT}		  	    2s
-${SPEED}                0.1s
-${NUM_POSTS}			50
-${CLICKLIKES}           true
-${NaN}			   	    css:#avimehenwal
 
 # **************** ALL LOCATORS in CAMEL-CASE divided by Sections
 # LOGIN PAGE
