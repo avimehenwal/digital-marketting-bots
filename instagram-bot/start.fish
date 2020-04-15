@@ -1,5 +1,12 @@
 #!/usr/bin/fish
 
+# AUTHOR      : avimehenwal
+# DATE        : 15-April-2020
+# PURPOSE     : bot framework entrypoint
+#
+# This script runs the Avi Digital Marketting Bots
+
+
 set iter 5
 echo $iter
 
@@ -8,7 +15,7 @@ if pgrep chrome
 end
 
 robot \
-    --dryrun \
+    # --dryrun \
     # --include test-structure \
     # --exclude homepage \
     --rpa \
@@ -24,3 +31,5 @@ robot \
     tests
 
 # instagram-bot/instagram.robot
+
+# END
