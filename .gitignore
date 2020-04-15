@@ -1,8 +1,9 @@
 # Byte-compiled / optimized / DLL files
 vars.yaml
-/output/
-instagram-bot/output/
-twitter-bot/output/
+*/output/*
+bots/instagram-bot/output/
+bots/twitter-bot/output/
+bots/output/
 
 __pycache__/
 *.py[cod]

@@ -2,7 +2,6 @@
 
 > Help you when you are feeling lonely on twitter, never leave behind
 
-![demo](demo.png)
 
 ## Run
 

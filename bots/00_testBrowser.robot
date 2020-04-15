@@ -3,6 +3,7 @@ Documentation           Simple example using SeleniumLibrary.
 Library                 SeleniumLibrary
 Test Template           Get Page Title From Browser
 Test Teardown           Close Browser
+Force Tags              self-test
 
 *** Variables ***
 ${LOGIN URL}            https://avimehenwal.in/
