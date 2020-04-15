@@ -11,30 +11,18 @@ Variables           ../resources/variables.py
 
 
 *** Variables ***
-${title}            Login
+${title}                    Login
 
-
-*** Keywords ***
-Is Homepage
-    [Documentation]         Do not miss adding documentation here
-    Match Page Title        ${title}
-
-Check Then Press
-    [Arguments]         ${locator}
-    [Documentation]     First check condition set from global variable then execute or skip
-    Run Keyword if      '${CLICKLIKES}' == 'true'      Wait And Press Element       ${locator}
 
 
 *** Keywords ***
 Is Login Page
-    Match Page Title        ${title}
-
-LoginPage Keyword Dummy
-    Log        LoginPage Keyword
+    [Documentation]         Do not miss adding documentation here
+    MATCH TITLE             ${title}
 
 Submit Login Form
-    [Documentation]             All information from variables
-    Wait And Input Text         ${UserName}      ${insta_user}
-    Wait And Input Text         ${Password}      ${insta_pass}
-    Wait And Press Element      ${LoginBtn}
-    Log To Console      LOGIN DONE
+    [Documentation]         All information from variables
+    INPUT                   ${LoginUserName}         ${twitter_bot}[0][user]
+    INPUT                   ${LoginPassword}         ${twitter_bot}[0][pass]
+    CLICK                   ${LoginBtn}
+    Log To Console          LOGIN DONE

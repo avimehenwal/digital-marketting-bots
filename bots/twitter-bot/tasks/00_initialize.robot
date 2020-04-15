@@ -13,9 +13,11 @@ Ready Browser
     Set Selenium Implicit Wait	    ${TIMEOUT}
     Set Selenium Speed	            ${SPEED}
 
-    Open Browser                    ${LOGIN URL}    ${BROWSER}
-    Maximize Browser Window
-    Silently Handle Alert
+    # Open Browser                    ${LOGIN URL}    ${BROWSER}
+    # Maximize Browser Window
+    # ALERT HANDLER
 
+    Log To Console                  ${twitter_bot}[0][user]
+    Log To Console                  ${twitter_bot}[0][pass]
 
 # END

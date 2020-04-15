@@ -45,7 +45,7 @@ MATCH TITLE
 
 
 # ------------------------------------------------------------ PROBLAMATIC KEYWORDS
-HANDLE ALERT
+ALERT HANDLER
 	[Documentation]		Supress language change check dialog box
 	...					Only seen at entrypoint window
 	...					Todo: Add exact message here

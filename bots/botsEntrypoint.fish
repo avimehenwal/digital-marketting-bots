@@ -18,10 +18,12 @@ if pgrep firefox
 end
 
 robot \
-    --dryrun \
+    # --dryrun \
     # --include test-structure \
-    --exclude 'self-test'  \
-    --include twitter \
+    --exclude 'instagram'  \
+    # --include twitter \
+    --include setup \
+    # --include login \
     --rpa \
     --name "My Bots" \
     # --suite BlessLikes \
@@ -34,6 +36,7 @@ robot \
     # --variable iter:$iter \
     ./
 
+echo "My Bot:  Completed!"
 # instagram-bot/instagram.robot
 
 # END

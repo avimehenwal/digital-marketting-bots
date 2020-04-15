@@ -3,10 +3,14 @@
 > Automate Twitter
 
 
+### Issues
+
 * Somehow Default Tags in Settings doesnt seems to work
   * workaround - use Force Tags
 
+### Steps
 
+* browse through urls, detect a pattern
 
 
 

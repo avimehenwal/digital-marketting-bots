@@ -9,20 +9,24 @@ Documentation       Twitter Bot specifi shared Variables
 
 *** Variables ***
 
-# PAGE URLs in CAPITAL case
-${LOGIN URL}      	https://www.instagram.com/accounts/login/
+# BOT PAGE URLs SECTION ------------------------------------------------
+${LOGIN URL}      	https://twitter.com/login
+${EXPLORE_URL}      https://twitter.com/explore
+${LOGOUT_URL}       https://twitter.com/logout
 
-
-# **************** ALL LOCATORS in CAMEL-CASE divided by Sections
-# LOGIN PAGE
-${UserName}       	  css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(2) > div > label > input
-${Password}        	  css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(3) > div > label > input
-${LoginBtn}           css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(4)
+# LOCATORS ------------------------------------------------------------
+# 1. LOGIN PAGE
+${LoginUserName}      xpath://input[@name="session[username_or_email]" and @type="text"]
+${LoginPassword}      xpath://input[@name="session[password]" and @type="password"]
+${LoginBtn}           xpath:(//form//div/span/span[text()='Log in'])[1]
 ${Popup}              css:div.piCib button.aOOlW:nth-child(2)
 
-# HOMEPAGE
+# 2. HOMEPAGE
 ${matchtext}      	all_visual_interpretation
 ${child_heart}     	div.eo2As > section >span:nth-child(1)
 ${Hearts}		   	css:article div.eo2As > section >span:nth-child(1)
 ${jsHeart}		   	article div.eo2As > section >span:nth-child(1)
 
+
+# TEXT BASED VALUES ------------------------------------------------------
+${bot_page_contains_text}         Twitter
