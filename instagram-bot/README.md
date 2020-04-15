@@ -46,4 +46,4 @@ kill -9 (pgrep firefox);robot --variablefile vars.yaml --outputdir output instag
   * Overcome Repetition
 * [ ] [Combine outputs](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#combining-outputs) from various deployments in postprocessing
   * When outputs are combined, a new top-level test suite is created so that test suites in the given output files are its child suites. This works the same way when multiple test data files or directories are executed, and also in this case the name of the top-level test suite is created by joining child suite names with an ampersand (&) and spaces. These automatically generated names are not that good, and it is often a good idea to use --name to give a more meaningful name:
-*
+* [ ] User **Cover Element** for debugging

@@ -20,8 +20,8 @@ LoginPage Keyword Dummy
 
 Submit Login Form
     [Documentation]             All information from variables
-    Wait And Input Text        ${UserName}      ${insta_user}
-    Wait And Input Text        ${Password}      ${insta_pass}
-    Wait And Press Button      ${LoginBtn}
+    Wait And Input Text         ${UserName}      ${insta_user}
+    Wait And Input Text         ${Password}      ${insta_pass}
+    Wait And Press Element      ${LoginBtn}
     Log To Console      LOGIN DONE
 

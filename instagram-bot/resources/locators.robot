@@ -8,10 +8,11 @@ ${LOGIN URL}      	https://www.instagram.com/accounts/login/
 ${BROWSER}        	Chrome
 
 # Framework Settings (in bold)
-${TIMEOUT}		  	2s
-${SPEED}            0.1s
-${NaN}			   	css:#avimehenwal
-${iter}				5
+${TIMEOUT}		  	    2s
+${SPEED}                0.1s
+${NaN}			   	    css:#avimehenwal
+${NUM_POSTS}			5
+${CLICKLIKES}           false
 
 # COMMOM PAGE VARIABLES
 # text variables in SMALL-CASE
@@ -22,10 +23,10 @@ ${title}                Instagram
 ${UserName}       	  css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(2) > div > label > input
 ${Password}        	  css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(3) > div > label > input
 ${LoginBtn}           css:#react-root > section > main > div > article > div > div:nth-child(1) > div > form > div:nth-child(4)
-${Popup}              css:button.aOOlW:nth-child(2)
+${Popup}              css:div.piCib button.aOOlW:nth-child(2)
 
 # HOMEPAGE
-${home_text}      	all_visual_interpretation
+${matchtext}      	all_visual_interpretation
 ${child_heart}     	div.eo2As > section >span:nth-child(1)
-${hearts}		   	css:article div.eo2As > section >span:nth-child(1)
-${jsheart}		   	article div.eo2As > section >span:nth-child(1)
+${Hearts}		   	css:article div.eo2As > section >span:nth-child(1)
+${jsHeart}		   	article div.eo2As > section >span:nth-child(1)

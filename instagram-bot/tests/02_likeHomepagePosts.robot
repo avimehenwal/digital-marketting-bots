@@ -3,17 +3,19 @@ Documentation           Outreach Strategy
 ...                     Like first {N} visible posts on homescreen
 Resource                ../resources/page_objects/Homepage.robot
 Force Tags 			    Instagram       homepage
+Suite Setup             Ready Homepage
 
 
 *** Test Cases ***
-Test Functio
-    [Tags]           test-structure
-    Homepage Keyword Dummy
+Go Crazy On Homepage
+    [Documentation]         Automation Strategy
+    [Tags]                  bot
+    Give Hearts to Initial Posts on Homepage
+    Continue Scrolling
 
-If Homepage
-    [Tags]          check
+
+*** Keywords ***
+Ready Homepage
+    [Tags]          check       popup
     Is Homepage
-
-Prepare Homepage
-    [Tags]          popup
     Ready Page

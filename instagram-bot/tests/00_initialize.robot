@@ -12,5 +12,5 @@ Ready Browser
     Set Selenium Speed	            ${SPEED}
 
     Open Browser                    ${LOGIN URL}    ${BROWSER}
-    Maximize Browser Window
+    # Maximize Browser Window
     Silently Handle Alert
