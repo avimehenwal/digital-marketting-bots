@@ -86,6 +86,9 @@ SELECT ACCOUNTS
 RUN SUITE TEARDOWN
 	Run Keyword and Ignore Error   		Close All Browser
 
-
+LOG ALL
+	[Arguments]				${msg}
+	Log To Console			${msg}
+	Log 					${msg}
 
 # END

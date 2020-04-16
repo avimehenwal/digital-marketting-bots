@@ -16,26 +16,35 @@ Variables           ../resources/variables.py
 *** Variables ***
 ${matchtext}        avimehenwal
 ${popup_text}       Not Now
+${title}            Twitter
 
+# //div[contains(@aria-label, 'Timeline: Your Home Timeline')]/div/div/div/div/div/div/article/div/div[2]/div[2]/div[2]/div[3]/div[3]
 
 *** Keywords ***
 Is Homepage
-    [Documentation]         Do not miss adding documentation here
-    Match Page Title        ${title}
+    MATCH TITLE         ${title}
 
 Check Then Press
     [Arguments]         ${locator}
     [Documentation]     First check condition set from global variable then execute or skip
     Run Keyword if      '${CLICKLIKES}' == 'true'      Wait And Press Element       ${locator}
 
-Give Hearts to Initial Posts on Homepage
-    [Documentation]         Initially 4 articles are seen on Homepage
-    ...                     articles are lazy loaded
-    ...     Todo: some point one
-    ...     Todo: some point two
-	FOR  	${index}	IN RANGE 	${count}
-		Log 		index ${index}
-		${article_heart}=	Catenate	${item}     ${heart}
-        Check Then Press            @{heart_elements}[${index}]
-	END
+Log Page locators
+    LOG ALL             ArticlesRoot = ${ArticlesRoot}
+    LOG ALL             Comments = ${Comments}
+    LOG ALL             Retweets = ${Retweets}
+    LOG ALL             Hearts = ${Hearts}
+
+Locate Hearts
+    Wait Until Page Contains Element            ${Hearts}
+    Page Should Contain Element                 ${Hearts}
+    ${length}=	    Get Length	                ${Hearts}
+    Log To Console          Hearts on page=${length}
+    # Hearts on page=137, but on browser they are 7-8 ?
+
+    # Should Be Equal As Integers	${length}	2
+    # Scroll Into View
+    # For Loop ITEM {N} times
+    #     Click action
+    # end
 

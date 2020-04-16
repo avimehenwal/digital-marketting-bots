@@ -6,10 +6,7 @@ Force Tags 			    ${platform}     twitter     teardown
 
 
 *** Test Cases ***
-Test Case 1
-    [Documentation]         Automation Strategy
-    [Tags]                  bot
-    Some Keyword
+
 
 
 *** Keywords ***

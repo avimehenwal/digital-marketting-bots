@@ -21,8 +21,9 @@ robot \
     # --dryrun \
     # --include test-structure \
     --exclude 'instagram'  \
-    # --include twitter \
-    --include setup \
+    --exclude skip \
+    --include twitter \
+    # --include setup \
     # --include login \
     --rpa \
     --name "My Bots" \

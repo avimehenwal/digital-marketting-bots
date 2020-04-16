@@ -6,14 +6,17 @@ Force Tags 			    ${platform}     twitter     homepage
 
 
 *** Test Cases ***
-Test Case 1
-    [Documentation]         Automation Strategy
+Print Locators
+    Log Page locators
+
+Traverse Hearts
+    [Documentation]         Locate Hearts on homepage
     [Tags]                  bot
-    Some Keyword
+    Locate Hearts
 
 
 *** Keywords ***
 Ready Homepage
     [Tags]          check       popup
     Is Homepage
-    Ready Page
+    # Ready Page

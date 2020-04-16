@@ -7,10 +7,25 @@
 
 * Somehow Default Tags in Settings doesnt seems to work
   * workaround - use Force Tags
+* Cannot rely on article alone, there are articles with articles inside them, retweets
+
+```
+//div[contains(@aria-label, 'Timeline: Your Home Timeline')]
+//article[1]
+//div[contains(@aria-label, 'Timeline: Your Home Timeline')]/div/div/div/div/div/div/article
+```
+
 
 ### Steps
 
+> Everything is a graph
+
 * browse through urls, detect a pattern
+* How to scroll feed,
+  * it is not very effective to use hard coded pause. Instead you can try to locate spinner or whatever, when twitter loads new content and wait until spinner disappear. This would be more elegant.
+* Frontend Technologies - probabily react and react native
+  * Lots of `JS` than plain old `HTML`
+* Initially 8 articles are loaded which are JS controlled to fetch and update on scroll event
 
 
 
