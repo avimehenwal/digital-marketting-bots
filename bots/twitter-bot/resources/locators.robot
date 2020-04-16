@@ -19,7 +19,7 @@ ${BOOKMARKS_URL}            https://twitter.com/i/bookmarks
 ${LISTS_URL}                https://twitter.com/avimehenwal/lists
 ${PROFILE_URL}              https://twitter.com/avimehenwal
 ${COMPOSETWEET_URL}         https://twitter.com/compose/tweet
-
+${NUM_POSTS}                20
 # LOCATORS ------------------------------------------------------------
 # 1. LOGIN PAGE
 ${LoginUserName}      xpath://input[@name="session[username_or_email]" and @type="text"]
@@ -42,8 +42,9 @@ ${hearts_append}            /div/div[2]/div[2]/div[2]/div[3]/div[3]
 ${Comments}                 ${ArticlesRoot}${comment_append}
 ${Retweets}                 ${ArticlesRoot}${retweets_append}
 ${Hearts}                   ${ArticlesRoot}${hearts_append}
-${HeartsCss}                div[aria-label~="Timeline"] article > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(3)
-
+${HeartsCss}                div[aria-label~="Timeline"] article > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(3) > div > div > div:nth-child(2)
+${css}                      css:
+${HeartsCssLoc}             ${css}${HeartsCss}
 
 ${matchtext}      	all_visual_interpretation
 ${child_heart}     	div.eo2As > section >span:nth-child(1)

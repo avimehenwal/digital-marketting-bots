@@ -13,6 +13,8 @@ Traverse Hearts
     [Documentation]         Locate Hearts on homepage
     [Tags]                  bot
     Locate Hearts
+    # Continue Scrolling
+
 
 
 *** Keywords ***

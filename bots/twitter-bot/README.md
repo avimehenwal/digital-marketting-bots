@@ -8,12 +8,14 @@
 * Somehow Default Tags in Settings doesnt seems to work
   * workaround - use Force Tags
 * Cannot rely on article alone, there are articles with articles inside them, retweets
+* ElementClickInterceptedException: Message: element click intercepted: Element <div class="css-1dbjc4n r-xoduu5 r-1udh08x">...</div> is not clickable at point (475, 9). Other element would receive the click: <div class="css-1dbjc4n r-16y2uox r-1wbh5a2 r-1pi2tsx r-1777fci">...</div>
 
 ```
 //div[contains(@aria-label, 'Timeline: Your Home Timeline')]
 //article[1]
 //div[contains(@aria-label, 'Timeline: Your Home Timeline')]/div/div/div/div/div/div/article
 ```
+
 
 
 ### Steps

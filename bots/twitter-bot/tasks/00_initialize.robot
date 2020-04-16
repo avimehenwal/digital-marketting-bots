@@ -14,7 +14,7 @@ Ready Browser
     Set Selenium Speed	            ${SPEED}
 
     Open Browser                    ${LOGIN URL}    ${BROWSER}
-    Maximize Browser Window
+    # Maximize Browser Window
     ALERT HANDLER
 
     # Log To Console                  ${twitter_bot}[0][user]
