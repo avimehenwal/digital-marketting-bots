@@ -27,7 +27,9 @@
   * Lots of `JS` than plain old `HTML`
 * Initially 8 articles are loaded which are JS controlled to fetch and update on scroll event
 
+## Good Reads
 
+* https://stackoverflow.com/questions/3401343/scroll-element-into-view-with-selenium
 
 #### Get in touch with me
 

@@ -17,7 +17,7 @@ Variables           ../resources/variables.py
 ${matchtext}        avimehenwal
 ${popup_text}       Not Now
 ${title}            Twitter
-
+${xpath}            xpath:
 # //div[contains(@aria-label, 'Timeline: Your Home Timeline')]/div/div/div/div/div/div/article/div/div[2]/div[2]/div[2]/div[3]/div[3]
 
 *** Keywords ***
@@ -30,16 +30,17 @@ Check Then Press
     Run Keyword if      '${CLICKLIKES}' == 'true'      Wait And Press Element       ${locator}
 
 Log Page locators
-    LOG ALL             ArticlesRoot = ${ArticlesRoot}
-    LOG ALL             Comments = ${Comments}
-    LOG ALL             Retweets = ${Retweets}
-    LOG ALL             Hearts = ${Hearts}
+    LOG ALL             ArticlesRoot = ${xpath}${ArticlesRoot}
+    LOG ALL             Comments = ${xpath}${Comments}
+    LOG ALL             Retweets = ${xpath}${Retweets}
+    LOG ALL             Hearts = ${xpath}${Hearts}
+    LOG ALL             Hearts CSS = ${HeartsCss}
 
 Locate Hearts
-    Wait Until Page Contains Element            ${Hearts}
-    Page Should Contain Element                 ${Hearts}
-    ${length}=	    Get Length	                ${Hearts}
-    Log To Console          Hearts on page=${length}
+    Wait Until Page Contains Element            ${xpath}${Hearts}
+    Page Should Contain Element                 ${xpath}${Hearts}
+    ${length}=	    Get Length	                ${xpath}${Hearts}
+    Log To Console                              Hearts on page=${length}
     # Hearts on page=137, but on browser they are 7-8 ?
 
     # Should Be Equal As Integers	${length}	2
@@ -48,3 +49,11 @@ Locate Hearts
     #     Click action
     # end
 
+    # 'WebElement' object is not iterable
+    Cover Element           ${xpath}${Hearts}
+    @{es}=          Get WebElements         ${xpath}${Hearts}
+    FOR    ${index}    ${item}    IN ENUMERATE    @{es}
+        Log To Console                ${index} ${item}
+        SCROLL IN VIEWPORT        ${HeartsCss}       ${index}
+        # IMPLICIT WAIT 1
+    END

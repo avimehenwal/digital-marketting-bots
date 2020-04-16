@@ -28,7 +28,10 @@ ${LoginBtn}           xpath:(//form//div/span/span[text()='Log in'])[1]
 ${Popup}              css:div.piCib button.aOOlW:nth-child(2)
 
 # 2. HOMEPAGE
-${TimelineRoot}             xpath://div[contains(@aria-label, 'Timeline: Your Home Timeline')]
+#react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-1pi2tsx.r-13qz1uu.r-417010 > main > div > div > div > div > div > div.css-1dbjc4n.r-1jgb5lz.r-1ye8kvj.r-13qz1uu > div > div > section > div
+
+${TimelineRoot}             //div[contains(@aria-label, 'Timeline: Your Home Timeline')]
+${TimelineRootCss}          div[aria-label~="Timeline"] article
 ${articles}                 /div/div/div/div/div/div/article
 ${ArticlesRoot}             ${TimelineRoot}${articles}
 # ${ArticlesRootActions}      ${ArticlesRoot}${article_actions}
@@ -39,6 +42,7 @@ ${hearts_append}            /div/div[2]/div[2]/div[2]/div[3]/div[3]
 ${Comments}                 ${ArticlesRoot}${comment_append}
 ${Retweets}                 ${ArticlesRoot}${retweets_append}
 ${Hearts}                   ${ArticlesRoot}${hearts_append}
+${HeartsCss}                div[aria-label~="Timeline"] article > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) > div:nth-child(3)
 
 
 ${matchtext}      	all_visual_interpretation

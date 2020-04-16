@@ -32,6 +32,7 @@ INPUT
     [Arguments]         ${locator}      ${text}
     [Documentation]     Wait, then look for element before filling
 	IS ELEMENT ENABLED          		${locator}
+	Clear Element Text 					${locator}
     Input Text          ${locator}    	${text}       clear=True
 
 
@@ -56,9 +57,27 @@ SCROLL IN VIEWPORT
 	[Arguments]		    ${locator} 			${index}
 	[Documentation]		seleniumLibrary implemented keyword doesnt work
 	...					only JS method works
+	...					Add check to if locator is present on page or not
+	...					ONLY WORKS with CSS SELECTORS
+	...					xpaths do not work!
+	...					Make sure locator does not contain css: or xpath: in start
 	# Log To Console 		item ${item}
+
 	Log To Console 		Scrollong at index ${index}
     Execute Javascript    document.querySelectorAll('${locator}')[${index}].scrollIntoView({ behavior: 'smooth', block: 'center'})
+    # Execute Javascript    document.querySelectorAll(${locator})[${index}].scrollIntoView({ behavior: 'smooth', block: 'center'})
+
+SCROLL IN VIEWPORT XPATH
+	[Arguments]		    ${locator} 			${index}
+	[Documentation]		seleniumLibrary implemented keyword doesnt work
+	...					only JS method works
+	...					Add check to if locator is present on page or not
+	...					ONLY WORKS with CSS SELECTORS
+	...					xpaths do not work!
+	...					Make sure locator does not contain css: or xpath: in start
+	Log To Console 		Scrollong at index ${index}
+	# JavascriptException: Message: javascript error: $x is not defined
+    Execute Javascript    $x("${locator}")[${index}].scrollIntoView({ behavior: 'smooth', block: 'center'})
 
 SCROLL TO BOTTON
 	Execute Javascript    window.scrollTo(0,document.body.scrollHeight)

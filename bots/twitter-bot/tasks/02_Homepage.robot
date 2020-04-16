@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation           Add all Homepage relates tests/tasks
 Resource                ../page_objects/Homepage.robot
-Suite Setup             Ready Homepage
+Suite Setup             Is Homepage
 Force Tags 			    ${platform}     twitter     homepage
 
 
@@ -16,7 +16,3 @@ Traverse Hearts
 
 
 *** Keywords ***
-Ready Homepage
-    [Tags]          check       popup
-    Is Homepage
-    # Ready Page
