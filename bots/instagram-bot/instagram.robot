@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Surf instagram and love posts on timeline
 Library             SeleniumLibrary
-Force Tags 			Instagram
+Force Tags 			skip
 
 # Suite Setup         Multiple Accounts        @{insta_user}
 Suite Teardown      Run Suite Teardown
